@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Ejercicio bootstrap</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+      .total{
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container total d-flex align-items-center justify-content-center">
+      <form role="form">
+        <div class="card">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" href="#internacional" role="tab" data-toggle="tab" id="tabIn">Internacional</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#imperial" role="tab" data-toggle="tab" id="tabIm">Imperial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#historial" role="tab" data-toggle="tab" id="tabHistorial">Historial</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Contenido tabs -->
+
+          <!-- Internacional -->
+          <div class="card-body tab-content">
+            <div role="tabpanel" class="tab-pane fade active show" id="internacional">
+              <div class="row form-group d-flex justify-content-center">
+                <label for="distancia" class="col-md-2 font-weight-bold col-xs-12 text-sm-center">Distancia</label>
+                <input type="text" class="form-group col-4" id="distanciaIn">
+                <select class="ml-1" id="optIn">
+                  <option>Kilómetros</option>
+                  <option>Metros</option>
+                </select>
+              </div> 
+              <div class="row form-group d-flex justify-content-center col-xs-12">
+                <label for="tiempo" class="col-md-2 font-weight-bold text-sm-center">Tiempo</label>
+                <input type="text" class="col-md-2 mr-1 text-center col-xs-10" id="horasIn" placeholder='HH'>
+                <input type="text" class="col-md-2 mr-1 text-center col-xs-10" id="minutosIn" placeholder='MM'>
+                <input type="text" class="col-md-2 mr-1 text-center col-xs-10" id="segundosIn" placeholder='SS'> 
+              </div>
+              <div class="row form-group d-flex justify-content-center">
+                <input type="button" class="btn-block col-8" value="Calcular Ritmo" id="calcRitIn">
+               	<input type="button" class="btn-block col-8" value="Calcular Marca" id="calcMarIn">
+              </div>
+              <div class="row form-group d-flex justify-content-center mt-3">
+                <label for="ritmo" class="col-md-2 col-xs-12 font-weight-bold text-sm-center">RITMO</label>
+                <input type="text" class="col-md-2 col-xs-10 mr-1 text-center" id="ritmoIn" placeholder="HH:MM:SS"> 
+                <label for="marca" class="col-md-2 col-xs-12 font-weight-bold text-sm-center">MARCA</label>
+                <input type="text" class="col-md-2 col-xs-10 mr-1 text-center" id="marcaIn"> 
+              </div>
+              <div id ="tablaIn" class="row form-group justify-content-center mt-3" hidden="hidden">
+                <label for="distCorte" class="col-md-4 col-xs-12 font-weight-bold text-sm-center">DISTANCIA DE CORTE</label>
+                <input type="text" class="col-md-2 col-xs-10 mr-1 text-center" id="distCorteIn" placeholder="Metros"> 
+                <input type="button" class="col-md-3 col-xs-10 mr-1 text-center" value="Calcular Tabla" id="botonDistCortIn"> 
+              </div>
+              <div id ="divTablaIn" class="row form-group justify-content-center mt-3">
+                    
+              </div>
+            </div>
+
+            <!-- Imperial -->
+             <div role="tabpanel" class="tab-pane fade" id="imperial">
+                <div class="row form-group d-flex justify-content-center">
+                    <label for="distancia" class="col-md-2 font-weight-bold col-xs-12 text-sm-center">Distancia</label>
+                    <input type="text" class="form-group col-4" id="distanciaIm">
+                    <select class="ml-1" id="optIm">
+                      <option>Millas</option>
+                      <option>Yardas</option>
+                    </select>
+                  </div>
+                  <div class="row form-group d-flex justify-content-center">
+                    <label for="tiempo" class="col-md-2 col-xs-12 font-weight-bold text-sm-center">Tiempo</label>
+                    <input type="text" class="col-md-2 col-xs-10 mr-1 text-center" id="horasIm" placeholder='HH'>
+                    <input type="text" class="col-md-2 col-xs-10 mr-1 text-center" id="minutosIm" placeholder='MM'>
+                    <input type="text" class="col-md-2 col-xs-10 mr-1 text-center" id="segundosIm" placeholder='SS'> 
+                  </div>
+                  <div class="row form-group d-flex justify-content-center">
+                    <input type="button" class="btn-block col-8" value="Calcular Ritmo" id="calcRitIm">
+                	<input type="button" class="btn-block col-8" value="Calcular Marca" id="calcMarIm">
+                  </div>
+                  <div class="row form-group d-flex justify-content-center mt-3">
+                      <label for="ritmo" class="col-md-2 col-xs-12 font-weight-bold text-sm-center">RITMO</label>
+                      <input type="text" class="col-md-2 col-xs-10 mr-1 text-center" id="ritmoIm" placeholder="HH:MM:SS"> 
+                      <label for="marca" class="col-md-2 col-xs-12 font-weight-bold text-sm-center">MARCA</label>
+                      <input type="text" class="col-md-2 col-xs-10 mr-1 text-center" id="marcaIm"> 
+                  </div>
+                  <div id ="tablaIm" class="row form-group justify-content-center mt-3" hidden="hidden">
+                      <label for="distCorte" class="col-md-4 col-xs-12 font-weight-bold text-sm-center">DISTANCIA DE CORTE</label>
+                      <input type="text" class="col-md-2 col-xs-10 mr-1 text-center" id="distCorteIm"  placeholder="Yardas"> 
+                      <input type="button" class="col-md-3 col-xs-10 text-center" value="Calcular Tabla" id="botonDistCortIm"> 
+                  </div>
+                  <div id ="divTablaIm" class="row form-group justify-content-center mt-3">
+                    
+                  </div>
+            </div>     
+        	<div role="tabpanel" class="tab-pane fade" id="historial">
+				
+	        </div>
+	      </div>       
+	      </form>
+	    </div>
+        </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script data-main="main" src="require.js"></script>
+   </body>
+</html>
